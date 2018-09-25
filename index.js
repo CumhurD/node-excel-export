@@ -92,6 +92,10 @@ let buildExport = params => {
  * @return Value for specified path.
  */
 function getValue(path, obj) {
+  if (!obj){
+    return '';
+  }
+
   if (path.length === 1) {
     return obj[path[0]];
   }
